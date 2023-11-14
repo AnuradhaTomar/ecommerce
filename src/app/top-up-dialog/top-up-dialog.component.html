@@ -1,0 +1,17 @@
+<div class="top-up-dialog">
+  <h2>Enter Top-Up Amount</h2>
+  <div>
+    <mat-form-field>
+      <input matInput type="number" placeholder="Enter amount" [(ngModel)]="topUpAmount" required>
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field>
+      <textarea matInput placeholder="Enter description" [(ngModel)]="topUpDescription"></textarea>
+    </mat-form-field>
+  </div>
+  <div class="dialog-buttons">
+    <button mat-button class="cancel-btn" (click)="onNoClick()">Cancel</button>
+    <button mat-button [mat-dialog-close]="{ amount: topUpAmount, description: topUpDescription }" cdkFocusInitial>Top Up</button>
+  </div>
+</div>

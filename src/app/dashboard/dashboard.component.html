@@ -1,0 +1,17 @@
+<div class="card-container">
+  <div *ngIf="products.length; else noProductsMessage">
+    <div *ngFor="let product of products" class="card">
+      <img [src]="product.image" alt="Product Image">
+      <h3>{{ product.name }}</h3>
+      <p>Price: {{ product.price }}</p>
+      <label for="quantity">Quantity:</label>
+      <input type="number" id="quantity" [(ngModel)]="product.quantity" placeholder="Enter quantity">
+      <br>
+      <br>
+      <button (click)="addToCart(product)">Add to Cart</button>
+    </div>
+  </div>
+  <ng-template #noProductsMessage>
+    <h2>No products available. Please add a product.</h2>
+  </ng-template>
+</div>

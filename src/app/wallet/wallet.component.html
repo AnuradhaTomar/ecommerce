@@ -1,0 +1,23 @@
+<div class="wallet-container">
+    <h2>Wallet Balance: ${{ balance }}</h2>
+    <button (click)="openTopUpDialog()">Top Up</button>
+    <h3>Transaction History:</h3>
+    <div class="transaction-container">
+        <div *ngFor="let transaction of getTransactions()" class="transaction-box">
+            <div class="transaction-info">
+                <span [ngStyle]="{'color': transaction.type === 'credit' ? 'green' : 'red'}">
+                    Type: {{ transaction.type }}
+                </span>
+                <span>
+                    Amount: ${{ transaction.amount }}
+                </span>
+                <span>
+                    Date: {{ transaction.date | date: 'medium' }}
+                </span>
+                <span *ngIf="transaction.description">
+                    Description: {{ transaction.description }}
+                </span>
+            </div>
+        </div>
+    </div>
+</div>

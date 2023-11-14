@@ -1,0 +1,21 @@
+<div class="transaction-history">
+    <h2>Transaction History</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Type</th>
+                <th>Amount</th>
+                <th>Date</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let transaction of transactions">
+                <td>{{ transaction.type }}</td>
+                <td [ngStyle]="{ 'color': transaction.type === 'credit' ? 'green' : 'red' }">${{ transaction.amount }}</td>
+                <td>{{ transaction.date | date: 'medium' }}</td>
+                <td>{{ transaction.description ? transaction.description : 'N/A' }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

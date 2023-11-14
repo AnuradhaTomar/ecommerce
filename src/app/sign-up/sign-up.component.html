@@ -1,0 +1,15 @@
+<div class="sign-up-container">
+  <h2>Sign Up</h2>
+  <form (submit)="signUp()">
+    <div class="input-group">
+      <input type="text" placeholder="Name" [(ngModel)]="name" name="name" required>
+    </div>
+    <div class="input-group">
+      <input type="email" placeholder="Email" [(ngModel)]="email" name="email" required>
+    </div>
+    <div class="input-group">
+      <input type="password" placeholder="Password" [(ngModel)]="password" name="password" required>
+    </div>
+    <button type="submit" class="btn-primary">Sign Up</button>
+  </form>
+</div>

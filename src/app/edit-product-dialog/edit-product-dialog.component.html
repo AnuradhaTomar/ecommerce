@@ -1,0 +1,17 @@
+<h2>Edit Product</h2>
+<div>
+  <mat-form-field>
+    <input matInput placeholder="Name" [(ngModel)]="product.name">
+  </mat-form-field>
+  <mat-form-field>
+    <textarea matInput placeholder="Description" [(ngModel)]="product.description"></textarea>
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput type="number" placeholder="Price" [(ngModel)]="product.price">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput type="number" placeholder="Quantity" [(ngModel)]="product.quantity">
+  </mat-form-field>
+</div>
+<button mat-button (click)="saveChanges()">Save Changes</button>
+<button mat-button (click)="closeDialog()">Cancel</button>

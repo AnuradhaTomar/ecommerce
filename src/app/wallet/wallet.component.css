@@ -1,0 +1,75 @@
+
+.wallet-container {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    margin: 90px 20px 20px 240px;
+    max-width: calc(100% - 280px);
+  }
+  
+  .wallet-container h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+  
+  .wallet-container button {
+    padding: 8px 16px;
+    margin: 5px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  .wallet-container button:hover {
+    background-color: #0056b3;
+  }
+  
+  .wallet-container ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .wallet-container li {
+    margin-bottom: 5px;
+  }
+
+.transaction-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.transaction-box {
+    padding: 15px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    width: 250px;
+}
+
+.transaction-info {
+    display: block;
+    margin-top: 10px;
+}
+
+.transaction-info span {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.transaction-description {
+    font-style: italic;
+    color: #666;
+    margin-top: 5px;
+}
+  
+  
+  @media (max-width: 768px) {
+    .wallet-container {
+      margin: 10px;
+    }
+  }
+  

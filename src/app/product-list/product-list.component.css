@@ -1,0 +1,29 @@
+
+.product-list-container {
+  margin-top: 70px;
+  margin-left: 240px;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: calc(100% - 270px);
+}
+
+
+.mat-table {
+  width: 100%;
+}
+
+
+.mat-row,
+.mat-header-row {
+  display: flex;
+}
+
+
+.mat-cell,
+.mat-header-cell {
+  flex: 1;
+  text-align: left;
+  padding: 8px;
+}
